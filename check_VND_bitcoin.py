@@ -4,7 +4,7 @@ import time
 def get_btc_price():
     url = "https://api.binance.com/api/v3/avgPrice?symbol=BTCUSDT"
     response = requests.get(url)
-    if response.status_code == 200: # 200 là giá trị trả về nếu trang web đồng ý truy cập
+    if response.status_code == 200: 
         data = response.json()
         btc_price = float(data["price"])
         return btc_price
